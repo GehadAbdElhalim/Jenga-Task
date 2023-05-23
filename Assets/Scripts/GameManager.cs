@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +23,7 @@ namespace JengaTask
 
         private List<JengaTower> jengaTowers = new List<JengaTower>();
         private int currentTowerIndex = -1;
+        private bool showingBlockDetails = false;
 
         private void Start()
         {
@@ -63,6 +63,11 @@ namespace JengaTask
         public void ShowBlockDetails(Block block)
         {
             uiManager.ShowDetailsPanel(block);
+        }
+
+        public bool IsShowingBlockDetails()
+        {
+            return uiManager.IsShowingBlockDetails();
         }
     }
 }

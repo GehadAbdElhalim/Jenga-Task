@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -44,6 +42,11 @@ namespace JengaTask
         {
             detailsPanel.SetActive(false);
             gameplayPanel.SetActive(true);
+        }
+
+        internal bool IsShowingBlockDetails()
+        {
+            return detailsPanel.activeSelf;
         }
     }
 }

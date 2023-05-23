@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace JengaTask
@@ -15,6 +13,8 @@ namespace JengaTask
 
         private void Update()
         {
+            if (GameManager.Instance.IsShowingBlockDetails()) return;
+
             if (Input.GetMouseButtonDown(1))
             {
                 Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
